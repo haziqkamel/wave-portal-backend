@@ -16,11 +16,11 @@ const main = async () => {
   );
 
   // You wave to yourself
-  let waveTxn = await waveContract.wave("This is wave #1");
+  let waveTxn = await waveContract.wave("This is wave #1", { gasLimit: 300000});
   await waveTxn.wait(); // wait for the transaction to be mined!
 
   // You wave to yourself
-  let waveTxn2 = await waveContract.wave("This is wave #2");
+  let waveTxn2 = await waveContract.wave("This is wave #2", { gasLimit: 300000});
   await waveTxn2.wait(); // wait for the transaction to be mined!
 
   // A randomPerson wave to you!
